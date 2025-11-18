@@ -1,0 +1,12 @@
+@import url(variables.css);
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Momo Trust Display';
+    color: var(--primary-color);
+
+}

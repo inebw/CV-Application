@@ -1,7 +1,5 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  line-height: 1.5;
-  background: none;
+@import url(./styles/variables.css);
+
+body {
+    background-color: var(--background-color);
 }
