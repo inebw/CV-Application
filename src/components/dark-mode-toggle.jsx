@@ -2,8 +2,9 @@ import "./../styles/dark-mode-toggle.css";
 import { useState } from "react";
 
 export default function DarkModeToggle() {
-  const [isChecked, setIsChecked] = useState(false);
   const currentTheme = localStorage.getItem("theme");
+  const [isChecked, setIsChecked] = useState(currentTheme === 'light');
+
 
   if (currentTheme === "light") {
     document.documentElement.setAttribute("data-theme", "light");
@@ -17,7 +18,7 @@ export default function DarkModeToggle() {
   }
   return (
     <label className="theme-toggle" title="Toggle theme">
-      <input type="checkbox" onChange={switchTheme} />
+      <input type="checkbox" onChange={switchTheme} checked={isChecked} />
       <span className="theme-toggle-sr">Toggle theme</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
