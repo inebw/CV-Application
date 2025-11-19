@@ -1,9 +1,11 @@
 :root {
     --background-color: #2b2d42;
     --primary-color: #edf2f4;
+    --secondry-color:#d9d9d9;
 }
 
 [data-theme="light"] {
     --background-color: #e5e5e5;
     --primary-color: #3d405b;
+    --secondry-color:#555b6e;
 }

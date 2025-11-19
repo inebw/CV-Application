@@ -1,3 +1,5 @@
+@import url(./styles/variables.css);
+
 * {
   margin: 0px;
   padding: 0px;
@@ -8,7 +10,17 @@
 }
 
 body {
+  padding: 10px 50px 10px 50px;
+  background-color: var(--background-color);
+  font-family: 'Rubik';
+  color: var(--secondry-color);
+}
+
+#root {
   display: flex;
   flex-direction: column;
-  padding: 10px 50px 10px 50px;
+  justify-content: center;
+  align-items: center;
 }
+
+
