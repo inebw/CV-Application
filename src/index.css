@@ -23,4 +23,10 @@ body {
   align-items: center;
 }
 
+input,
+button,
+textarea {
+  font-family: 'Rubik';
+}
+
 

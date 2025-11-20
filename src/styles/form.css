@@ -1,0 +1,96 @@
+@import url(./variables.css);
+
+.pageControl {
+  display: flex;
+  justify-self: center;
+  gap: 15px;
+}
+
+.generate,
+.addMore {
+  width: 300px;
+  font-weight: 500;
+  padding: 10px 65px 10px 65px;
+}
+
+.generate {
+  font-weight: bold;
+  background-color: #94d1be;
+  transition: scale 0.1s;
+}
+
+.generate:hover {
+  scale: 1.1;
+}
+
+.error {
+  text-align: center;
+  font-weight: 500;
+  width: 70%;
+  font-size: 1.3rem;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  padding: 10px;
+  color: #ff6b6b;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.loader-container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 40px;
+  color: #514b82;
+  border: 2px solid;
+  position: relative;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  width: 25%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  50% {
+    left: 100%;
+    transform: translateX(calc(-100% - 4px));
+  }
+}

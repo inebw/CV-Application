@@ -1,10 +1,10 @@
 import ChoosePhoto from "./choose-photo";
+import "./../styles/basic-details.css"
 
-export default function BasicDetails({ person, onChange, fileChange }) {
+export default function BasicDetails({ person, onChange, fileChange, isDisabled = false, className = undefined }) {
   return (
-    <form action="#">
-      <h2>Let's start with your basic details</h2>
-      <ChoosePhoto photo={person.photo} onChange={fileChange}/>
+    <div className={className}>
+      <ChoosePhoto photo={person.photo} onChange={fileChange} isDisabled={isDisabled}/>
       <label htmlFor="firstName">
         <input
           type="text"
@@ -12,6 +12,8 @@ export default function BasicDetails({ person, onChange, fileChange }) {
           placeholder="first name"
           value={person.firstName}
           onChange={onChange}
+          disabled={isDisabled}
+          maxLength={24}
         />
       </label>
       <label htmlFor="lastName">
@@ -21,6 +23,8 @@ export default function BasicDetails({ person, onChange, fileChange }) {
           placeholder="last name"
           value={person.lastName}
           onChange={onChange}
+          disabled={isDisabled}
+          maxLength={24}
         />
       </label>
       <label htmlFor="phone">
@@ -30,6 +34,7 @@ export default function BasicDetails({ person, onChange, fileChange }) {
           placeholder="phone number"
           value={person.phone}
           onChange={onChange}
+          disabled={isDisabled}
         />
       </label>
       <label htmlFor="email">
@@ -39,6 +44,7 @@ export default function BasicDetails({ person, onChange, fileChange }) {
           placeholder="e-mail"
           value={person.email}
           onChange={onChange}
+          disabled={isDisabled}
         />
       </label>
       <label htmlFor="city">
@@ -48,6 +54,7 @@ export default function BasicDetails({ person, onChange, fileChange }) {
           placeholder="city"
           value={person.city}
           onChange={onChange}
+          disabled={isDisabled}
         />
       </label>
       <label htmlFor="state">
@@ -57,6 +64,7 @@ export default function BasicDetails({ person, onChange, fileChange }) {
           placeholder="state"
           value={person.state}
           onChange={onChange}
+          disabled={isDisabled}
         />
       </label>
       <label htmlFor="country">
@@ -66,8 +74,9 @@ export default function BasicDetails({ person, onChange, fileChange }) {
           placeholder="country"
           value={person.country}
           onChange={onChange}
+          disabled={isDisabled}
         />
       </label>
-    </form>
+    </div>
   );
 }

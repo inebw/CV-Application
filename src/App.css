@@ -9,3 +9,53 @@
     max-width: 95%
   }
 }
+
+button,
+.choose-image-button {
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-color: var(--input-background);
+    color: var(--primary-color);
+    padding: 2px 10px 2px 10px;
+    box-shadow: 0px 0px 2px var(--secondry-color);
+    border-radius: 16px;
+    font-weight: bold;
+}
+
+.choose-image-button {
+  padding: 5px 45px 5px 45px;
+}
+
+button:disabled {
+  opacity: 60%;
+}
+
+textarea:not(:disabled):hover,
+input:not(:disabled):hover,
+button:hover,
+.choose-image-button:hover {
+  opacity: 70%;
+}
+
+textarea:not(:disabled),
+input:not(:disabled) {
+  background-color: var(--input-background);
+  color: var(--background-color);
+  border-radius: 8px;
+  font-size: 1.5rem;
+  margin: 5px 10px 5px 0px;
+  padding: 5px;
+  color: var(--primary-color);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: var(--primary-color);
+  opacity: var(--placeholder-opacity)
+}

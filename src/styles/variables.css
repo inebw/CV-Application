@@ -2,10 +2,20 @@
     --background-color: #2b2d42;
     --primary-color: #edf2f4;
     --secondry-color:#d9d9d9;
+    --button-background:#8d99ae;
+    --button-color: #3d405b;
+    --button-border: #ccc5b9;
+    --input-background:#555b6e;
+    --placeholder-opacity: 40%;
 }
 
 [data-theme="light"] {
     --background-color: #e5e5e5;
     --primary-color: #3d405b;
     --secondry-color:#555b6e;
+    --button-color:#555b6e;
+    --button-border: #2b2d42;
+    --button-background:#d9d9d9;
+    --input-background:#f4f3ee;
+    --placeholder-opacity: 70%
 }

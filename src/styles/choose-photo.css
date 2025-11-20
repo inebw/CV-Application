@@ -1,11 +1,15 @@
 #photo {
-    opacity: 0;
+  display: none;
 }
 
-.preview>img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    object-fit: cover;
+.choose-photo {
+  display: grid;
+  gap: 5px;
+}
 
+.preview > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
 }

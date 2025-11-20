@@ -1,0 +1,16 @@
+@import url("./variables.css");
+
+textarea {
+    scrollbar-width: none;
+    width: 300px;
+    resize: none;
+}
+
+.exp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0px 0px 2px var(--primary-color);
+}
